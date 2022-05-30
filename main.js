@@ -19,6 +19,7 @@ const getIndividualPokemon = (url) => {
         id: response.id,
         type: response.types.map((type) => type.type.name),
         image: response.sprites.versions["generation-v"]["black-white"].animated.front_shiny,
+        weight: response.weight,
       };
       pokemon.type.forEach((type) => {
         if (!TYPES.includes(type)) {
@@ -42,8 +43,9 @@ const drawPokemons = (pokemons) => {
     li.classList.add("card");
     const html = `
             <img src=${poke.image} alt=${poke.name}>
-            <p class="card-title">${poke.name}<p>
+            <p class="card-title">${poke.id}. ${poke.name}<p>
             <div class="card-subtitle">${poke.type[0]} ${poke.type[1] ? `, ${poke.type[1]}` : ""}</div>
+            <p class="poke_weight">Peso: ${poke.weight}kg</p>
         `;
     li.innerHTML = html;
     pokedex$$.appendChild(li);
