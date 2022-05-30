@@ -1,5 +1,7 @@
 body {
-    background-color:#c3cfa1 ;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c3cfa155, #c3cfa1 );
     margin: 0;
     font-family: rubik;
     color: white;
@@ -15,17 +17,21 @@ body {
   }
 
   .logo{ //A la izquierda?
-    margin-top: 25px;
-    width: 200px;
+    display: flex;
+    margin-top: 15px;
+    width: 180px;
     height: 150px;
   }
 
   .card {
+    border-radius: 15px;
     list-style: none;
     padding: 40px;
-    background-color: #f4f4f4;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(195,207,161,1) 40%);
     color: #222;
     text-align: center;
+    box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.66);
   }
   .card-title {
     text-transform: uppercase;
@@ -68,7 +74,8 @@ body {
   .input-container { //A la derecha?
     text-align: center;
     margin-bottom: 40px;
-  
+    display: flex;
+    flex-direction: row-reverse;
     .input-container input {
       padding: 20px 10px;
       font-size: 24px;

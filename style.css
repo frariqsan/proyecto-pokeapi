@@ -1,5 +1,7 @@
 body {
-  background-color: #c3cfa1;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px), repeating-linear-gradient(#c3cfa155, #c3cfa1);
   margin: 0;
   font-family: rubik;
   color: white;
@@ -17,17 +19,25 @@ h1 {
 }
 
 .logo {
-  margin-top: 25px;
-  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  width: 180px;
   height: 150px;
 }
 
 .card {
+  border-radius: 15px;
   list-style: none;
   padding: 40px;
-  background-color: #f4f4f4;
+  background: white;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(40%, #c3cfa1));
+  background: linear-gradient(0deg, white 0%, #c3cfa1 40%);
   color: #222;
   text-align: center;
+  -webkit-box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.66);
+          box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.66);
 }
 
 .card-title {
@@ -103,6 +113,13 @@ h1 {
 .input-container {
   text-align: center;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .input-container .input-container input {

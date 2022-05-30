@@ -83,17 +83,17 @@ const filterByType = (event) => {
   drawPokemons(filtered);
 };
 
-const drawTypesButtons = () => {
-  const typesContainer$$ = document.querySelector(".types");
+//const drawTypesButtons = () => {
+  //const typesContainer$$ = document.querySelector(".types");
 
-  TYPES.forEach((type) => {
-    const span = document.createElement("span");
-    span.classList.add(type);
-    span.addEventListener("click", filterByType);
-    span.innerText = type;
-    typesContainer$$.appendChild(span);
-  });
-};
+  // TYPES.forEach((type) => {
+  //   const span = document.createElement("span");
+  //   span.classList.add(type);
+  //   span.addEventListener("click", filterByType);
+  //   span.innerText = type;
+  //   typesContainer$$.appendChild(span);
+  // });
+//};
 
 const startMyCode = async () => {
   addAllMyEventsListeners();
@@ -105,7 +105,7 @@ const startMyCode = async () => {
     ALL_POKEMONS.push(pokemonInfo);
   }
 
-  drawTypesButtons();
+  //drawTypesButtons();
   drawPokemons(ALL_POKEMONS);
 };
 
